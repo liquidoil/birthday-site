@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>董小萌生日快乐！</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #a18cd1);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            overflow-x: hidden;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.92);
+            padding: 3rem 2.5rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            max-width: 800px;
+            width: 90%;
+            border: 15px solid transparent;
+            border-image: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4d96ff) 1;
+            position: relative;
+            overflow: hidden;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient( to right, rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: moveGrid 20s linear infinite;
+            z-index: 0;
+        }
+        @keyframes moveGrid {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(40px, 40px); }
+        }
+        .content { position: relative; z-index: 1; }
+        h1 {
+            color: #ff6b6b;
+            font-size: 3.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 3px 3px 0 #ffd93d;
+        }
+        .birthday-name {
+            font-size: 5.5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #ff6b6b, #ffd93d, #6bcf7f, #4d96ff, #9d65ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin: 2rem 0;
+            line-height: 1.2;
+            letter-spacing: 2px;
+        }
+        .message {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            margin: 2rem 0;
+            color: #555;
+        }
+        .emoji-container {
+            font-size: 3.5rem;
+            margin: 2.5rem 0;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .signature {
+            font-size: 1.5rem;
+            color: #888;
+            margin-top: 3rem;
+            font-style: italic;
+            border-top: 2px dashed #ddd;
+            padding-top: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .card { padding: 2rem 1.5rem; width: 95%; }
+            h1 { font-size: 2.8rem; }
+            .birthday-name { font-size: 4rem; }
+            .emoji-container { font-size: 2.8rem; }
+            .message { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="content">
+            <h1>🎂 生日快乐！ 🎉</h1>
+            <div class="birthday-name">董 小 萌</div>
+            <div class="message">
+                愿你的今天充满欢笑与惊喜，<br>
+                愿你的未来如繁星般璀璨明亮。<br>
+                每一岁都奔走在自己的热爱里，<br>
+                永远年轻，永远快乐！
+            </div>
+            <div class="emoji-container">
+                🎈 🎁 🎂 🍰 🥳 ✨ 🎇 🎆
+            </div>
+            <div class="message">
+                最美好的祝福送给你，<br>
+                愿你的人生之旅精彩纷呈！
+            </div>
+            <div class="signature">
+                衷心的祝福 · 特别为你呈现
+            </div>
+        </div>
+    </div>
+</body>
+</html>
